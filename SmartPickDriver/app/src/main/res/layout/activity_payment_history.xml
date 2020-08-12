@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/reconnectId"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/colorPrimary">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivbackId"
+                android:layout_width="25sp"
+                android:layout_height="22sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_feather_arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/payment_history"
+                android:textColor="#fff"
+                android:fontFamily="serif"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reconnectId"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@android:color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvpaymentHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_150sdp"
+    android:background="@color/colorPrimary"
+    android:id="@+id/rlallProfileId"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/userprofileb" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvUserNameId"
+                android:text="@string/driver_name"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageView"
+                android:textColor="@color/colorwhite"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="serif"
+                />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/LieditProfileid"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvUserNameId"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivprofileeditId"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:padding="@dimen/_4sdp"
+            app:srcCompat="@drawable/icon_material_edit" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="serif"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+       </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

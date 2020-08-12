@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="12sp"
+    app:cardElevation="2sp">
+
+    <RelativeLayout
+        android:padding="@dimen/_10sdp" android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_25sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/icon_cross"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivlogoutCloseId"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ivlogoutCloseId"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textColor="@color/textblack"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:text="@string/otp_verification"
+                android:textSize="@dimen/_20sdp">
+            </androidx.appcompat.widget.AppCompatTextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="2">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOTpNoId"
+                        android:layout_width="0sp"
+                        android:layout_weight="1.85"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="serif"
+                        android:hint="@string/enter_otp_number"
+                        android:maxLength="10"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:textColor="@color/textblack"
+                        android:textColorHint="@color/textblack"
+                        android:singleLine="true"
+                        android:textSize="13sp" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUserImageId"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight=".12"
+                android:background="@drawable/icon_metro_mobile" />
+
+
+
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:background="@color/colorPrimary" />
+
+            <RelativeLayout
+                android:layout_below="@+id/remobilesignId"
+                android:id="@+id/rlSendId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/button_shape_main">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="@string/send"
+                    android:textColor="@color/coloryellow"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

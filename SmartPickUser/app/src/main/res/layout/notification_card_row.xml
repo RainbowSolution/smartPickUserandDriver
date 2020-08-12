@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/coloryellow"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_5sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="@string/username"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/textblack"
+            android:fontFamily="serif"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/driverNumber"
+            android:textSize="12.0sp"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="@string/username"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/textblack"
+            android:fontFamily="serif"
+            android:id="@+id/numberplate"
+            android:textSize="12.0sp"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_2sdp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/liprofileId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:id="@+id/driverProifleId"
+                android:layout_gravity="center"
+                android:src="@drawable/userprofileb" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:text="@string/username"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/textblack"
+                android:fontFamily="serif"
+                android:id="@+id/userNameId"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_12sdp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/liprofileId"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/liprofileId">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:id="@+id/tvNotificationId"
+                android:text="@string/lorem_ipsum_is_a_placeholder_text_csutom_view_back_id"
+                android:textColor="@color/textblack"
+                android:fontFamily="serif"
+                android:textSize="@dimen/_12sdp"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlHardcoded">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewdetilsId"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/button_shape_main"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="@string/live_track"
+            android:textAllCaps="false"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/_9sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:text="@string/booking_done"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/viewdoneId"
+            android:textSize="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/button_shape_main"
+            android:textColor="@color/colorwhite"
+            android:fontFamily="serif"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

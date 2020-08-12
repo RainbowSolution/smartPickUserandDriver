@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:background="@drawable/button_shape">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvholyplaceId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:text="@string/booking_accept"
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linameInformationId"
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:visibility="gone"
+            android:layout_below="@+id/tvholyplaceId"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivuserprofileimageId"
+                android:layout_width="0sp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/userprofileb" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:visibility="visible"
+                    android:fontFamily="serif"
+                    android:textColor="@color/textblack"
+                    android:textSize="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/john_doe"
+                    android:visibility="visible"
+                    android:id="@+id/userNameId"
+                    android:fontFamily="serif"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/textblack"
+                    android:textSize="@dimen/_10sdp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_number"
+                    android:visibility="visible"
+                    android:fontFamily="serif"
+                    android:textColor="@color/textblack"
+                    android:textSize="@dimen/_8sdp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_10_minute_ago"
+                    android:visibility="visible"
+                    android:fontFamily="serif"
+                    android:id="@+id/timeId"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/textblack"
+                    android:textSize="@dimen/_10sdp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlSigninId"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/linameInformationId"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/button_shape_main">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:text="@string/live_track"
+                android:textColor="@color/coloryellow"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/send"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

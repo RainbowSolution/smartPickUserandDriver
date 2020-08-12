@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relativeid"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_main"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_above="@+id/trakingId"
+
+            android:layout_height="match_parent">
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+            </fragment>
+
+            <LinearLayout
+                android:id="@+id/locationMarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/green_image_icon"
+                    android:layout_width="wrap_content"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/green_map_icon" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/read_image_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/read_map_icon" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:background="@drawable/selector_loc_bg"
+            android:padding="12.0dip"
+            android:id="@+id/view_pickup"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginRight="15.0dip"
+            style="@style/LView">
+            <TextView
+                android:background="@drawable/shape_start_dot"
+                style="@style/DotMark" />
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10.0dip"
+                style="@style/LWView">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textSize="12.0sp"
+                    android:textColor="@color/colorSecondary"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_pickup_loc" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:textSize="13.0sp"
+                    android:textColor="@drawable/selector_loc_txt"
+                    android:ellipsize="end"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/txt_p_loc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:hint="@string/txt_enter_pickup"
+                    android:singleLine="true"
+                    android:fontFamily="serif"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/btn_fav"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/selector_fav"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/selector_loc_bg"
+            android:padding="12.0dip"
+            android:id="@+id/view_drop"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            style="@style/LView">
+            <TextView
+                android:background="@drawable/shape_end_dot"
+                style="@style/DotMark" />
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10.0dip"
+                style="@style/LWView">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textSize="12.0sp"
+                    android:textColor="@color/colorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_drop_loc"
+                    android:fontFamily="serif" />
+                <LinearLayout
+                    android:layout_marginTop="5.0dip"
+                    style="@style/LView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="11.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:id="@+id/txt_multiple"
+                        android:background="@drawable/shape_multiple"
+                        android:paddingLeft="5.0dip"
+                        android:paddingTop="3.0dip"
+                        android:paddingRight="5.0dip"
+                        android:paddingBottom="3.0dip"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="@string/txt_multiple"
+                        android:fontFamily="serif"/>
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:textSize="13.0sp"
+                        android:textColor="@drawable/selector_loc_txt"
+                        android:ellipsize="end"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/txt_d_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txt_enter_drop"
+                        android:maxLines="1"
+                        android:fontFamily="serif"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/btn_add"
+                android:paddingLeft="5.0dip"
+                android:paddingRight="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_add"
+                android:tint="@color/colorHint" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/selector_loc_bg"
+                android:padding="12.0dip"
+                android:visibility="gone"
+                android:id="@+id/view_drop_a"
+                android:layout_below="@+id/view_drop"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                style="@style/LView">
+                <TextView
+                    android:background="@drawable/shape_end_dot"
+                    style="@style/DotMark" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10.0dip"
+                    style="@style/LWView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_drop_loc"
+                        android:fontFamily="serif" />
+                    <LinearLayout
+                        android:layout_marginTop="5.0dip"
+                        style="@style/LView">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="11.0sp"
+                            android:textColor="@color/colorSecondary"
+                            android:background="@drawable/shape_multiple"
+                            android:paddingLeft="5.0dip"
+                            android:paddingTop="3.0dip"
+                            android:paddingRight="5.0dip"
+                            android:paddingBottom="3.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:text="@string/txt_multiple"
+                            android:fontFamily="serif"/>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textSize="13.0sp"
+                            android:textColor="@drawable/selector_loc_txt"
+                            android:ellipsize="end"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/txt_d_loc_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txt_enter_drop"
+                            android:maxLines="1"
+                            android:fontFamily="serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_add_a"
+                    android:paddingLeft="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/colorHint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/selector_loc_bg"
+                android:padding="12.0dip"
+                android:visibility="gone"
+                android:id="@+id/view_drop_b"
+                android:layout_below="@+id/view_drop"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                style="@style/LView">
+                <TextView
+                    android:background="@drawable/shape_end_dot"
+                    style="@style/DotMark" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10.0dip"
+                    style="@style/LWView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_drop_loc"
+                        android:fontFamily="serif" />
+                    <LinearLayout
+                        android:layout_marginTop="5.0dip"
+                        style="@style/LView">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="11.0sp"
+                            android:textColor="@color/colorSecondary"
+                            android:background="@drawable/shape_multiple"
+                            android:paddingLeft="5.0dip"
+                            android:paddingTop="3.0dip"
+                            android:paddingRight="5.0dip"
+                            android:paddingBottom="3.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:text="@string/txt_multiple"
+                            android:fontFamily="serif"/>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textSize="13.0sp"
+                            android:textColor="@drawable/selector_loc_txt"
+                            android:ellipsize="end"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/txt_d_loc_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txt_enter_drop"
+                            android:maxLines="1"
+                            android:fontFamily="serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_add_b"
+                    android:paddingLeft="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/colorHint" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/selector_loc_bg"
+                android:padding="12.0dip"
+                android:visibility="gone"
+                android:id="@+id/view_drop_c"
+                android:layout_below="@+id/view_drop"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                style="@style/LView">
+                <TextView
+                    android:background="@drawable/shape_end_dot"
+                    style="@style/DotMark" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10.0dip"
+                    style="@style/LWView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_drop_loc"
+                        android:fontFamily="serif" />
+                    <LinearLayout
+                        android:layout_marginTop="5.0dip"
+                        style="@style/LView">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="11.0sp"
+                            android:textColor="@color/colorSecondary"
+                            android:background="@drawable/shape_multiple"
+                            android:paddingLeft="5.0dip"
+                            android:paddingTop="3.0dip"
+                            android:paddingRight="5.0dip"
+                            android:paddingBottom="3.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:text="@string/txt_multiple"
+                            android:fontFamily="serif"/>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textSize="13.0sp"
+                            android:textColor="@drawable/selector_loc_txt"
+                            android:ellipsize="end"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/txt_d_loc_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txt_enter_drop"
+                            android:maxLines="1"
+                            android:fontFamily="serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_add_c"
+                    android:paddingLeft="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/colorHint" />
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/selector_loc_bg"
+                android:padding="12.0dip"
+                android:visibility="gone"
+                android:id="@+id/view_drop_d"
+                android:layout_below="@+id/view_drop"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                style="@style/LView">
+                <TextView
+                    android:background="@drawable/shape_end_dot"
+                    style="@style/DotMark" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10.0dip"
+                    style="@style/LWView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_drop_loc"
+                        android:fontFamily="serif" />
+                    <LinearLayout
+                        android:layout_marginTop="5.0dip"
+                        style="@style/LView">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="11.0sp"
+                            android:textColor="@color/colorSecondary"
+                            android:background="@drawable/shape_multiple"
+                            android:paddingLeft="5.0dip"
+                            android:paddingTop="3.0dip"
+                            android:paddingRight="5.0dip"
+                            android:paddingBottom="3.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:text="@string/txt_multiple"
+                            android:fontFamily="serif"/>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:textSize="13.0sp"
+                            android:textColor="@drawable/selector_loc_txt"
+                            android:ellipsize="end"
+                            android:id="@+id/txt_d_loc_d"
+                            android:background="@android:color/transparent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txt_enter_drop"
+                            android:maxLines="1"
+                            android:fontFamily="serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_add_d"
+                    android:paddingLeft="5.0dip"
+                    android:visibility="gone"
+                    android:paddingRight="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/colorHint" />
+            </LinearLayout>
+
+            <View
+            android:id="@+id/line_end"
+            android:background="@drawable/shape_dot_line"
+            android:visibility="gone"
+            android:layout_width="1.0dip"
+            android:layout_height="120.0dip"
+            android:layout_below="@+id/view_drop"
+            android:layout_centerInParent="true" />
+        <View
+            android:id="@+id/line_start"
+            android:background="@drawable/shape_dot_line"
+            android:visibility="gone"
+            android:layout_width="1.0dip"
+            android:layout_height="170.0dip"
+            android:layout_below="@+id/view_pickup"
+            android:layout_centerInParent="true" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/trakingId"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+
+            <LinearLayout
+                android:id="@+id/detailsId"
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:id="@+id/row_truck"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/VView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@drawable/selector_truck_txt"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/txt_min"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:fontFamily="serif"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_no_cabs"
+                        android:paddingTop="3.0dip"
+                        android:paddingBottom="3.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_more"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/colorHint" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_truck"
+                        android:layout_width="80.0dip"
+                        android:layout_height="80.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:src="@drawable/selector_ton_one"
+                        android:scaleType="fitCenter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/row_truck_med"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/VView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@drawable/selector_truck_txt"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/txt_min1"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:fontFamily="serif"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_no_cabs1"
+                        android:paddingTop="3.0dip"
+                        android:paddingBottom="3.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_more"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/colorHint" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_truck_med"
+                        android:layout_width="100.0dip"
+                        android:layout_height="80.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:src="@drawable/selector_ton_three"
+                        android:scaleType="fitCenter" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/row_truck_cov"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/VView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@drawable/selector_truck_txt"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/txt_min2"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:fontFamily="serif"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_no_cabs2"
+                        android:paddingTop="3.0dip"
+                        android:paddingBottom="3.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_more"
+                        android:scaleType="fitCenter"
+                        android:tint="@color/colorHint" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/img_truck_cov"
+                        android:layout_width="100.0dip"
+                        android:layout_height="80.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:src="@drawable/selector_ton_three_cov"
+                        android:scaleType="fitCenter" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lipickupNowId"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/detailsId"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:id="@+id/repickupLaterId"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="@string/pickup_later"
+                        android:textColor="@color/coloryellow"
+                        android:textSize="12.0sp" />
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@color/colorwhite"
+                    android:layout_height="match_parent"/>
+
+                <RelativeLayout
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:id="@+id/repickupNowId"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@color/colorPrimary">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="@string/pickup_now"
+                        android:textColor="@color/coloryellow"
+                        android:textSize="12.0sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

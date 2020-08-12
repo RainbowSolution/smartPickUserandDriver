@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_name">
+    <item>Floor</item>
+</string-array>
+    <string-array name="array_packaging">
+        <item>Packaging Required ?</item>
+    </string-array>
+    <string-array name="array_helpers">
+        <item>Helpers </item>
+    </string-array>
+</resources>

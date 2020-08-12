@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/reconnectId"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivbackId"
+                android:layout_width="26sp"
+                android:layout_height="22sp"
+                android:padding="3sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_feather_arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/notifications"
+                android:textColor="#fff"
+                android:fontFamily="serif"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlrefresId"
+            android:layout_below="@+id/reconnectId"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@android:color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvnotificationId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlrefresId"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/button_shape_main">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/refresh"
+                android:textColor="@color/coloryellow"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/renotificaionId"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center"
+                android:id="@+id/image_icon"
+                android:layout_width="80.0dip"
+                android:layout_centerHorizontal="true"
+                android:layout_height="80.0dip"
+                android:layout_marginTop="8.0dip"
+                android:background="@drawable/booking_icon"
+                android:scaleType="fitCenter" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="end"
+                android:layout_below="@+id/image_icon"
+                android:id="@+id/txt_v_type"
+                android:layout_height="wrap_content"
+                android:text="@string/not_record_available"
+                android:layout_width="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

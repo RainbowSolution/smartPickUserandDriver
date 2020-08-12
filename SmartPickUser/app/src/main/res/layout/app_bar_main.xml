@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlHomeToolbarId"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogoHomeId"
+                android:layout_width="23sp"
+                android:layout_height="20sp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_ionic_md_menu" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/home"
+                android:visibility="visible"
+                android:textColor="@color/coloryellow"
+                android:textSize="16sp">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+            <RelativeLayout
+                android:id="@+id/rlCartHomeId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivnotificaontHomeId"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10sp"
+                        android:padding="3sp"
+                        android:src="@drawable/icon_awesome_bell" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlCartBackHomeId"
+                        android:layout_width="18sp"
+                        android:layout_height="18sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:background="@drawable/red_circle">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/ivNofificationcoutId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="serif"
+                            android:textColor="@color/colorwhite"
+                            android:text="0"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rlHomeToolbarId"
+            android:layout_height="wrap_content">
+            <include layout="@layout/main_fragment"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

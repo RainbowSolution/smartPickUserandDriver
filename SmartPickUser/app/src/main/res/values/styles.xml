@@ -1,0 +1,202 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">@dimen/_5sdp</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+    <style name="PauseDialogAnimationa">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top</item>
+    </style>
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+    </style>
+    <style name="LView">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="LViewa">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="DropDot">
+        <item name="android:background">@drawable/shape_drop_dot</item>
+        <item name="android:layout_width">2.0dip</item>
+        <item name="android:layout_height">2.0dip</item>
+        <item name="android:layout_margin">3.0dip</item>
+    </style>
+    <style name="DotMark">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">6.0dip</item>
+        <item name="android:layout_height">6.0dip</item>
+    </style>
+    <style name="LWView">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="WLView">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="StyleRoot" parent="@style/Widget.Support.CoordinatorLayout">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="FView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="PaySubTxt">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/colorTxt</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">17.0dip</item>
+        <item name="android:paddingRight">17.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+    <style name="LineView">
+        <item name="android:background">@color/colorLine</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.100000024dip</item>
+    </style>
+    <style name="VWView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="PayView" parent="@style/LWWView">
+        <item name="android:padding">17.0dip</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+    </style>
+    <style name="LWWView" parent="@style/LWView">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="PayIcon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">25.0dip</item>
+    </style>
+    <style name="ListView" parent="@style/VView">
+
+    </style>
+    <style name="CmnBtn">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/colorwhite</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">48.0dip</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+    <style name="BottomBtn" parent="@style/CmnBtn">
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">50.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="Paydescriptionas">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">30dip</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:minWidth">25.0dip</item>
+    </style>
+    <style name="PayTxt">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@drawable/selector_loc_txt</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">12.0dip</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+    <style name="BottomSheetStyle" parent="@style/VView">
+        <item name="android:background">@color/colorwhite</item>
+        <item name="android:padding">15.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="behavior_peekHeight">0.0dip</item>
+        <item name="layout_behavior">@string/bottom_sheet_behavior</item>
+    </style>
+    <style name="InputLayout" parent="@style/Widget.Design.TextInputLayout">
+        <item name="android:theme">@style/StyleInputLayout</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+
+    </style>
+    <style name="StyleInputLayout">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="InputEdt">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/colorTxt</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+    <style name="Paydescription">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@drawable/selector_loc_txt</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">12.0dip</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+    <style name="VLine">
+        <item name="android:background">@color/colorLine</item>
+        <item name="android:layout_width">0.100000024dip</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="PayTick">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">1.0dip</item>
+        <item name="android:src">@drawable/selector_tick</item>
+    </style>
+    <style name="VView">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

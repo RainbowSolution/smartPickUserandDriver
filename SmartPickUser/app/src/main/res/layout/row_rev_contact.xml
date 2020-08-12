@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/VView"
+    android:orientation="vertical"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        style="@style/VView">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center"
+        android:id="@+id/img_truck"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:padding="@dimen/_5sdp"
+        android:backgroundTint="@color/colorSecondary"
+        android:background="@drawable/ic_pick_contact"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:padding="15.0dip"
+        style="@style/VView">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="15.0sp"
+            android:textColor="@color/colorSecondary"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/txt_drop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:fontFamily="serif" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textSize="15.0sp"
+            android:textColor="@color/colorTxt"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/txt_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:fontFamily="serif" />
+    </LinearLayout>
+    </LinearLayout>
+    <View
+        style="@style/LineView" />
+</LinearLayout>

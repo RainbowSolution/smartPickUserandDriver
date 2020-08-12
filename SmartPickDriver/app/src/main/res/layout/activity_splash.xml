@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".initial.SplashActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvnameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="@string/driver_app"
+            android:textColor="@color/coloryellow"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="normal" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSplashId"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/tvnameId"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/logoaa"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvsmartPickupId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_below="@+id/ivSplashId"
+            android:text="@string/smartpickup"
+            android:textColor="@color/coloryellow"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

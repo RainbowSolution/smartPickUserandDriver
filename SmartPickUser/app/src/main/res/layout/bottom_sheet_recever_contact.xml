@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    style="@style/BottomSheetStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        layout="@layout/layout_header" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_name"
+        style="@style/InputLayout">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_name"
+            android:hint="@string/txt_name"
+            style="@style/InputEdt" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <View style="@style/LineView" />
+    <LinearLayout
+        android:layout_marginTop="10.0dip"
+        style="@style/LView">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_no"
+            android:layout_width="0.0dip"
+            android:layout_marginTop="0.0dip"
+            android:layout_weight="1.0"
+            style="@style/InputLayout">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_no"
+                android:hint="@string/txt_mob_hint"
+                android:maxLength="50"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                style="@style/InputEdt" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="bottom"
+            android:id="@+id/btn_add"
+            android:padding="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/ic_pick_contact"
+            android:tint="@color/colorSecondary"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+    <View style="@style/LineView" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_ok"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/txt_ok"
+        style="@style/CmnBtn" />
+</LinearLayout>

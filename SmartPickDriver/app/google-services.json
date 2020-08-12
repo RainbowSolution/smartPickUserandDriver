@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "107605785753",
+    "firebase_url": "https://driver-application-cefd2.firebaseio.com",
+    "project_id": "driver-application-cefd2",
+    "storage_bucket": "driver-application-cefd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107605785753:android:9e6b3a3d00c619d1a0cc08",
+        "android_client_info": {
+          "package_name": "com.alpha.smartpick.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107605785753-s895si4rk09t6aa0n26ffv4pnf1o12mg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alpha.smartpick.driver",
+            "certificate_hash": "2a571ca116d853765d3f22c9e4ec3e4bd361cb6d"
+          }
+        },
+        {
+          "client_id": "107605785753-grub0ju9s5kaf61tn81ji9r707csgrir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY7-Vx45bxBOhH_ogKPTE7d1--cxHc704"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107605785753-grub0ju9s5kaf61tn81ji9r707csgrir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

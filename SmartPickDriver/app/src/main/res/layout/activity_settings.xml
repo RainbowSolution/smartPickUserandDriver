@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rlHomeToolbarId"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivbackId"
+            android:layout_width="25sp"
+            android:layout_height="22sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_feather_arrow_left" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings"
+            android:visibility="visible"
+            android:textColor="@color/coloryellow"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogoutHomeId"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/icon_awesome_bell"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp" />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appreance"
+            android:id="@+id/tvappreanceID"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_25sdp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_below="@+id/tvappreanceID"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/night_mode"
+                android:textAllCaps="false"
+                android:id="@+id/soundId"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:fontFamily="serif"
+                android:textColor="@color/textblack"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                tools:ignore="RelativeOverlap" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch3"
+                android:checked="true"
+                android:background="@drawable/boderline"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                app:thumbTint="@color/colorPrimary"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_5sdp"
+                app:trackTint="@drawable/checker_track"
+                android:layout_height="@dimen/_10sdp"
+                android:switchMinWidth="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                tools:ignore="RtlSymmetry"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notifications"
+            android:id="@+id/tvnotificaionId"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_25sdp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_below="@+id/tvnotificaionId"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sound"
+                android:textAllCaps="false"
+                android:id="@+id/showId"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:fontFamily="serif"
+                android:textColor="@color/textblack"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                tools:ignore="RelativeOverlap" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch2"
+                android:checked="true"
+                android:background="@drawable/boderline"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:thumbTint="@color/colorPrimary"
+                android:paddingStart="@dimen/_5sdp"
+                app:trackTint="@drawable/checker_track"
+                android:layout_height="@dimen/_8sdp"
+                android:switchMinWidth="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                tools:ignore="RtlSymmetry" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy"
+            android:id="@+id/privacyId"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="serif"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_25sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_your_password"
+            android:textAllCaps="false"
+            android:layout_below="@+id/privacyId"
+            android:id="@+id/changepasswordId"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="serif"
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            android:layout_marginLeft="@dimen/_25sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            android:textAllCaps="false"
+            android:layout_below="@+id/changepasswordId"
+            android:id="@+id/editProfileid"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="serif"
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_25sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_account"
+            android:textAllCaps="false"
+            android:layout_below="@+id/editProfileid"
+            android:id="@+id/deleteaccountId"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="serif"
+            android:textColor="@color/textblack"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_25sdp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

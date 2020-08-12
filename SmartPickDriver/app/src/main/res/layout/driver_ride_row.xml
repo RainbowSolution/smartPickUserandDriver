@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:background="@color/colorwhite"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="@string/_27_march_2020"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/textblack"
+            android:fontFamily="serif"
+            android:id="@+id/invoice_id"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:textSize="12.0sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            tools:ignore="RtlHardcoded" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="@string/saturday"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/textblack"
+            android:fontFamily="serif"
+            android:id="@+id/text_date"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:textSize="12.0sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/as"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:weightSum="6"
+        android:background="@drawable/ride_shape_button"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="@string/username"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/textblack"
+            android:fontFamily="serif"
+            android:layout_alignParentRight="true"
+            android:id="@+id/price"
+            android:layout_gravity="center"
+            android:textSize="14.0sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/liprofileId"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:id="@+id/userProifleId"
+                android:layout_gravity="center"
+                android:src="@drawable/profilea" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:text="@string/username"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/textblack"
+                android:fontFamily="serif"
+                android:id="@+id/userNameId"
+                android:layout_gravity="center"
+                android:textSize="14.0sp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/liprofileId"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:padding="12.0dip"
+                android:id="@+id/view_pickup"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="15.0dip"
+                android:layout_marginRight="15.0dip"
+                style="@style/LView">
+                <TextView
+                    android:background="@drawable/shape_start_dot"
+                    style="@style/DotMark" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10.0dip"
+                    style="@style/LWView"
+                    android:layout_marginLeft="10.0dip">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="serif"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_pickup_loc" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="13.0sp"
+                        android:textColor="@drawable/selector_loc_txt"
+                        android:ellipsize="end"
+                        android:id="@+id/txt_p_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:hint="@string/txt_enter_pickup"
+                        android:singleLine="true"
+                        android:fontFamily="serif"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                style="@style/LineView" />
+            <LinearLayout
+                android:padding="12.0dip"
+                android:id="@+id/view_drop"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip"
+                style="@style/LView">
+                <TextView
+                    android:background="@drawable/shape_end_dot"
+                    style="@style/DotMark" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10.0dip"
+                    style="@style/LWView">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_drop_loc"
+                        android:fontFamily="serif" />
+                    <LinearLayout
+                        android:layout_marginTop="5.0dip"
+                        style="@style/LView">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="11.0sp"
+                            android:textColor="@color/colorSecondary"
+                            android:id="@+id/txt_multiple"
+                            android:background="@drawable/shape_multiple"
+                            android:paddingLeft="5.0dip"
+                            android:paddingTop="3.0dip"
+                            android:paddingRight="5.0dip"
+                            android:paddingBottom="3.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:text="@string/txt_multiple"
+                            android:fontFamily="serif"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="13.0sp"
+                            android:textColor="@drawable/selector_loc_txt"
+                            android:ellipsize="end"
+                            android:id="@+id/txt_d_loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/txt_enter_drop"
+                            android:maxLines="1"
+                            android:fontFamily="serif"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

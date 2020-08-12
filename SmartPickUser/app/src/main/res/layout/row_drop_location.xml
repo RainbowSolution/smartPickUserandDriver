@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    style="@style/LView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="12.0dip"
+        android:id="@+id/view_drop"
+        android:layout_marginRight="15.0dip"
+        style="@style/LView">
+        <TextView
+            android:background="@drawable/shape_end_dot"
+            style="@style/DotMark" />
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10.0dip"
+            android:visibility="visible"
+            style="@style/LWView">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="12.0sp"
+                android:textColor="@color/colorSecondary"
+                android:layout_width="wrap_content"
+                android:fontFamily="serif"
+                android:layout_height="wrap_content"
+                android:text="@string/drop_location" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="14.0sp"
+                android:textColor="@drawable/selector_loc_txt"
+                android:ellipsize="end"
+                android:background="@android:color/transparent"
+                android:id="@+id/txt_d_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:hint="@string/txt_enter_drop"
+                android:singleLine="true"
+                android:fontFamily="serif"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textSize="9.0sp"
+                    android:ellipsize="end"
+                    android:id="@+id/reciver_name"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/sign_up"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    tools:ignore="SmallSp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textSize="9.0sp"
+                    android:ellipsize="end"
+                    android:text="@string/sign_up"
+                    android:id="@+id/reciver_number"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <View style="@style/LineView" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.alpha.smartpick.driver">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.alpha.smartpick.driver.initial.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.alpha.smartpick.driver.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.passengerPkg.PassengerDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.livetrackPkg.LiveTrackActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.notificationPkg.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.ridehistoryPkg.RideHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.initial.SignInActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.initial.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.initial.VerifyOtpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.historyDetailsPkg.HistoryDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.paymentDetailsPkg.PaymentDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.paymentHistoryPkg.PaymentHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.settingPkg.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.editProfilePkg.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.paymentHistoryPkg.PaymentDetailsActivityMain" android:screenOrientation="portrait"/>
+        <activity android:name="com.alpha.smartpick.driver.paymentHistoryPkg.HistoryDetailsActivityMain" android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <service android:name="com.alpha.smartpick.driver.fcmNotificationPkg.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
